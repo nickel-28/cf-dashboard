@@ -1,0 +1,138 @@
+.heatmap-container {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--card-border);
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.heatmap-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.heatmap-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.heatmap-icon {
+  font-size: 1.5rem;
+}
+
+.heatmap-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-primary);
+}
+
+.year-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--card-bg);
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--card-border);
+}
+
+.year-label {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.year-dropdown {
+  background-color: var(--input-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--input-border);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.year-dropdown:hover {
+  border-color: #60a5fa;
+}
+
+.year-stats {
+  color: #60a5fa;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  background: rgba(96, 165, 250, 0.1);
+  border-radius: 0.5rem;
+}
+
+.heatmap-wrapper {
+  background: var(--widget-bg);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.react-calendar-heatmap {
+  width: 100%;
+  max-width: 100%;
+}
+
+.react-calendar-heatmap text {
+  fill: var(--text-secondary);
+  font-size: 10px;
+}
+
+.react-calendar-heatmap .color-empty { fill: #1f2937; }
+.react-calendar-heatmap .color-scale-1 { fill: #0e4429; }
+.react-calendar-heatmap .color-scale-2 { fill: #006d32; }
+.react-calendar-heatmap .color-scale-3 { fill: #26a641; }
+.react-calendar-heatmap .color-scale-4 { fill: #39d353; }
+
+.react-calendar-heatmap rect:hover {
+  stroke: #60a5fa;
+  stroke-width: 2px;
+}
+
+.heatmap-legend {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.25rem;
+  margin-top: 1rem;
+  padding: 0 1.5rem;
+}
+
+.legend-text {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin: 0 0.5rem;
+}
+
+.legend-box {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .heatmap-wrapper {
+    overflow-x: scroll;
+  }
+  .heatmap-header-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .year-selector {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

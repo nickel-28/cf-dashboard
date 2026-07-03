@@ -1,0 +1,152 @@
+.charts-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.difficulty-container,
+.chart-container {
+  padding-top: 2rem;
+  border-top: 1px solid var(--card-border);
+  width: 100%;
+  max-width: 100%;
+}
+
+.difficulty-header,
+.chart-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.difficulty-icon,
+.chart-icon {
+  font-size: 1.5rem;
+}
+
+.difficulty-title,
+.chart-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-primary);
+}
+
+.difficulty-wrapper {
+  position: relative;
+  height: 350px;
+  width: 100%;
+  max-width: 100%;
+  background: var(--widget-bg);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.difficulty-wrapper canvas {
+  max-width: 100% !important;
+  max-height: 100% !important;
+}
+
+.chart-wrapper {
+  position: relative;
+  height: 350px;
+  width: 100%;
+  max-width: 100%;
+  background: var(--widget-bg);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.chart-wrapper canvas {
+  max-width: 100% !important;
+  max-height: 100% !important;
+}
+
+.chart-stats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.chart-stat {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.chart-stat-label {
+  display: block;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.chart-stat-value {
+  display: block;
+  color: #60a5fa;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+@media (min-width: 640px) {
+  .chart-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .chart-wrapper {
+    height: 350px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .charts-row {
+    grid-template-columns: 1fr 1.5fr;
+    padding-top: 2rem;
+    border-top: 1px solid var(--card-border);
+  }
+  .difficulty-container,
+  .chart-container {
+    border-top: none;
+    padding-top: 0;
+  }
+  .chart-wrapper {
+    height: 400px;
+  }
+  .difficulty-wrapper {
+    height: 400px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .chart-wrapper {
+    height: 450px;
+  }
+  .difficulty-wrapper {
+    height: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .chart-wrapper {
+    height: 300px;
+  }
+  .difficulty-wrapper {
+    height: 300px;
+  }
+}

@@ -1,0 +1,120 @@
+.recommendations-section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--card-border);
+  width: 100%;
+}
+
+.recommendations-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.recommendations-icon {
+  font-size: 1.5rem;
+}
+
+.recommendations-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-primary);
+  flex: 1;
+}
+
+.recs-button {
+  background: linear-gradient(to right, #4ade80, #22d3ee);
+  color: #111827;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.5rem 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.recs-button:hover {
+  opacity: 0.9;
+}
+
+.recs-button:disabled {
+  background: #6b7280;
+  color: white;
+  cursor: not-allowed;
+}
+
+.recs-empty {
+  color: var(--text-secondary);
+}
+
+.recommendations-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.recommendation-card {
+  background: var(--widget-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  text-decoration: none;
+  transition: transform 0.3s, border-color 0.3s;
+  display: block;
+}
+
+.recommendation-card:hover {
+  transform: translateY(-3px);
+  border-color: #60a5fa;
+}
+
+.recommendation-name {
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.recommendation-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.recommendation-rating {
+  color: #fb923c;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.recommendation-id {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.recommendation-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.recommendation-tag {
+  background: rgba(96, 165, 250, 0.15);
+  color: #60a5fa;
+  font-size: 0.7rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 9999px;
+}
+
+@media (min-width: 640px) {
+  .recommendations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .recommendations-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,73 @@
+.compare-section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--card-border);
+  width: 100%;
+}
+
+.compare-toggle-button {
+  background: linear-gradient(to right, #fb923c, #f472b6);
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.compare-toggle-button:hover {
+  opacity: 0.9;
+}
+
+.compare-content {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.compare-content .search-wrapper {
+  max-width: 500px;
+}
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--widget-bg);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.compare-table th,
+.compare-table td {
+  padding: 0.75rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid var(--card-border);
+  color: var(--text-primary);
+}
+
+.compare-table th {
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.compare-table td:first-child,
+.compare-table th:first-child {
+  text-align: left;
+  color: var(--text-secondary);
+}
+
+.compare-chart-wrapper {
+  position: relative;
+  height: 350px;
+  background: var(--widget-bg);
+  border-radius: 1rem;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.compare-chart-wrapper canvas {
+  max-width: 100% !important;
+  max-height: 100% !important;
+}
